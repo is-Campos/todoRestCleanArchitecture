@@ -1,12 +1,12 @@
 import { prisma } from "../../data/postgres";
 import {
   CreateTodoDto,
-  TodoDataSorce,
+  TodoDataSource,
   TodoEntity,
   UpdateTodoDto,
 } from "../../domain";
 
-export class TodoDataSourceImpl implements TodoDataSorce {
+export class TodoDataSourceImpl implements TodoDataSource {
   async create(createTodoDto: CreateTodoDto): Promise<TodoEntity> {
     const todo = await prisma.todo.create({
       data: createTodoDto!

@@ -1,10 +1,10 @@
-import { CreateTodoDto, TodoDataSorce, TodoEntity, TodoRepository, UpdateTodoDto } from "../../domain";
+import { CreateTodoDto, TodoDataSource, TodoEntity, TodoRepository, UpdateTodoDto } from "../../domain";
 
 
 export class TodoRepositoryImpl implements TodoRepository{
 
   constructor(
-    private readonly datasource : TodoDataSorce,
+    private readonly datasource : TodoDataSource,
   ){}
 
   create(createTodoDto: CreateTodoDto): Promise<TodoEntity> {

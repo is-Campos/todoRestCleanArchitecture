@@ -1,7 +1,7 @@
 import { CreateTodoDto, UpdateTodoDto } from "../dtos";
 import { TodoEntity } from "../entities/todo.entity";
 
-export abstract class TodoDataSorce {
+export abstract class TodoDataSource {
 
   abstract create(createTodoDto: CreateTodoDto): Promise<TodoEntity>;
   abstract getAll():Promise<TodoEntity[]>;
