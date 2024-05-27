@@ -1,4 +1,5 @@
 import express, { Router } from 'express'
+import compression from 'compression'
 
 interface Options {
   port:number,
@@ -25,6 +26,7 @@ export class Server {
     //* Middlewares
     this.app.use(express.json())//raw
     this.app.use(express.urlencoded({extended: true}))//x-wwww-form-urlencoded
+    this.app.use(compression())
 
     //* Public folder
 
